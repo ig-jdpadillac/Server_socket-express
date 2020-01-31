@@ -7,7 +7,7 @@ const enviroment_1 = require("./global/enviroment");
 const server_1 = __importDefault(require("./classes/server"));
 const cors_1 = __importDefault(require("cors"));
 const body_parser_1 = __importDefault(require("body-parser"));
-const server = new server_1.default();
+const server = server_1.default.instance;
 // BodyParser
 server.app.use(body_parser_1.default.urlencoded({ extended: true }));
 server.app.use(body_parser_1.default.json());
