@@ -49,6 +49,9 @@ export default class Server {
 
             // desconectar
             socketConfig.desconectar(cliente);
+
+            // Configurar suario
+            socketConfig.configurarUsuario(cliente, this.io);
         });
         
     }

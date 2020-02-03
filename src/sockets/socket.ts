@@ -16,3 +16,17 @@ export const mensaje = (cliente: Socket, io: SocketIO.Server) => {
         io.emit('mensaje-nuevo', payload);
     });
 }
+
+
+// consfigurar usuario
+export const configurarUsuario = (cliente: Socket, io: SocketIO.Server) => {
+    cliente.on('configurar-usuario', (payload: any, callbak: Function) => {
+        console.log('COnfigurando  usuario', payload);
+
+
+        callbak({
+            ok: true,
+            mensaje: `Usuario ${payload.nombre}, configurado correctamente`,
+        })
+    });
+}

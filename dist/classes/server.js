@@ -35,6 +35,8 @@ class Server {
             socketConfig.mensaje(cliente, this.io);
             // desconectar
             socketConfig.desconectar(cliente);
+            // Configurar suario
+            socketConfig.configurarUsuario(cliente, this.io);
         });
     }
     start(callback) {

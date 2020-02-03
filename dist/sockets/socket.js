@@ -11,3 +11,13 @@ exports.mensaje = (cliente, io) => {
         io.emit('mensaje-nuevo', payload);
     });
 };
+// consfigurar usuario
+exports.configurarUsuario = (cliente, io) => {
+    cliente.on('configurar-usuario', (payload, callbak) => {
+        console.log('COnfigurando  usuario', payload);
+        callbak({
+            ok: true,
+            mensaje: `Usuario ${payload.nombre}, configurado correctamente`,
+        });
+    });
+};
