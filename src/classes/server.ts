@@ -41,7 +41,8 @@ export default class Server {
         this.io.on('connection', cliente => {
             console.log('nuevo cliente conectado');
 
-
+            // conectar  cleinte
+            socketConfig.conectarCliente(cliente);
 
             // recibiendo mensaje
             socketConfig.mensaje(cliente, this.io);

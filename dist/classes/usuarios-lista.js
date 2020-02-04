@@ -11,12 +11,13 @@ class UsuariosLista {
     }
     actualizarNombre(id, nombre) {
         for (let usuario of this.lista) {
-            if (usuario.id = id) {
+            if (usuario.id === id) {
                 usuario.nombre = nombre;
                 break;
             }
         }
         console.log('Actualizando usuario');
+        console.log(this.lista);
     }
     getLista() {
         return this.lista;
